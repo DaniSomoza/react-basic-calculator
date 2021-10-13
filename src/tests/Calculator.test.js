@@ -150,27 +150,28 @@ describe("Calculator component", () => {
     expect(inputScreenNode.value).toBe("2");
   });
 
-  // it("should calculate multiply", () => {
-  //   const { getByTestId } = render(<Calculator />);
-  //   const inputScreenNode = getByTestId("screen-input");
-  //   expect(inputScreenNode.value).toBe("0");
+  it("should calculate multiply", () => {
+    const { getByTestId } = render(<Calculator />);
+    const inputScreenNode = getByTestId("screen-input");
+    expect(inputScreenNode.value).toBe("0");
 
-  //   fireEvent.change(inputScreenNode, { target: { value: '2*3' } });
+    fireEvent.change(inputScreenNode, { target: { value: "2*3" } });
 
-  //   fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
+    fireEvent.keyDown(inputScreenNode, { key: "Enter", code: "Enter" });
 
-  //   expect(inputScreenNode.value).toBe("6");
-  // });
+    expect(inputScreenNode.value).toBe("6");
+  });
 
-  // it("should calculate division", () => {
-  //   const { getByTestId } = render(<Calculator />);
-  //   const inputScreenNode = getByTestId("screen-input");
-  //   expect(inputScreenNode.value).toBe("0");
+  it("should calculate division", () => {
+    const { getByTestId } = render(<Calculator />);
+    const inputScreenNode = getByTestId("screen-input");
+    expect(inputScreenNode.value).toBe("0");
 
-  //   fireEvent.change(inputScreenNode, { target: { value: '6/2' } });
+    fireEvent.change(inputScreenNode, { target: { value: "6/2" } });
 
-  //   fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
+    fireEvent.keyDown(inputScreenNode, { key: "Enter", code: "Enter" });
 
-  //   expect(inputScreenNode.value).toBe("3");
-  // });
+    // FIXME: this test is failing on purpose
+    expect(inputScreenNode.value).toBe("4");
+  });
 });
