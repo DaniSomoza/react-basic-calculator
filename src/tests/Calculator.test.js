@@ -171,7 +171,6 @@ describe("Calculator component", () => {
 
     fireEvent.keyDown(inputScreenNode, { key: "Enter", code: "Enter" });
 
-    // FIXME: this test is failing on purpose
-    expect(inputScreenNode.value).toBe("4");
+    expect(inputScreenNode.value).toBe("3");
   });
 });
