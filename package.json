@@ -16,7 +16,8 @@
     "test": "react-scripts test",
     "cy:open": "cypress open",
     "cypress": "start-server-and-test start http://localhost:3000 cy:open",
-    "coverage": "npm test -- --coverage",
+    "coverage": "npm test -- --coverage --watchAll=false",
+    "test:ci": "npm run coverage -- --ci --json --testLocationInResults --runInBand --outputFile=jest.results.json",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
