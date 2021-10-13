@@ -1,10 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![test](https://img.shields.io/github/workflow/status/DaniSomoza/react-basic-calculator/Unit%20tests%20&%20coverage/master?label=test)
+[![coverage](https://coveralls.io/repos/github/DaniSomoza/react-basic-calculator/badge.svg?branch=master)](https://coveralls.io/github/DaniSomoza/react-basic-calculator?branch=master)
+
 ## Available Scripts
 
 In the project directory, you can run:
-
-[![Coverage Status](https://coveralls.io/repos/github/DaniSomoza/react-basic-calculator/badge.svg?branch=master)](https://coveralls.io/github/DaniSomoza/react-basic-calculator?branch=master)
 
 ### `npm start`
 
