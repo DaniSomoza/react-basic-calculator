@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+[![Coverage Status](https://coveralls.io/repos/github/DaniSomoza/react-basic-calculator/badge.svg?branch=master)](https://coveralls.io/github/DaniSomoza/react-basic-calculator?branch=master)
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
