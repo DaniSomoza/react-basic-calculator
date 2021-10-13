@@ -89,7 +89,7 @@ describe("Calculator component", () => {
     const inputScreenNode = getByTestId("screen-input");
     expect(inputScreenNode.value).toBe("0");
 
-    fireEvent.change(inputScreenNode, { target: { value: '2' } });
+    fireEvent.change(inputScreenNode, { target: { value: "2" } });
 
     expect(inputScreenNode.value).toBe("2");
   });
@@ -99,7 +99,7 @@ describe("Calculator component", () => {
     const inputScreenNode = getByTestId("screen-input");
     expect(inputScreenNode.value).toBe("0");
 
-    fireEvent.change(inputScreenNode, { target: { value: '2+' } });
+    fireEvent.change(inputScreenNode, { target: { value: "2+" } });
 
     expect(inputScreenNode.value).toBe("2+");
   });
@@ -109,72 +109,68 @@ describe("Calculator component", () => {
     const inputScreenNode = getByTestId("screen-input");
     expect(inputScreenNode.value).toBe("0");
 
-    fireEvent.change(inputScreenNode, { target: { value: '2+3' } });
+    fireEvent.change(inputScreenNode, { target: { value: "2+3" } });
 
     expect(inputScreenNode.value).toBe("2+3");
-  }); 
+  });
 
   it("screen input should show result using keyboard", () => {
     const { getByTestId } = render(<Calculator />);
     const inputScreenNode = getByTestId("screen-input");
     expect(inputScreenNode.value).toBe("0");
 
-    fireEvent.change(inputScreenNode, { target: { value: '2+3' } });
+    fireEvent.change(inputScreenNode, { target: { value: "2+3" } });
 
-    fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
+    fireEvent.keyDown(inputScreenNode, { key: "Enter", code: "Enter" });
 
     expect(inputScreenNode.value).toBe("5");
-  }); 
-
+  });
 
   it("should calculate sum", () => {
     const { getByTestId } = render(<Calculator />);
     const inputScreenNode = getByTestId("screen-input");
     expect(inputScreenNode.value).toBe("0");
 
-    fireEvent.change(inputScreenNode, { target: { value: '5+3' } });
+    fireEvent.change(inputScreenNode, { target: { value: "5+3" } });
 
-    fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
+    fireEvent.keyDown(inputScreenNode, { key: "Enter", code: "Enter" });
 
     expect(inputScreenNode.value).toBe("8");
-  }); 
+  });
 
   it("should calculate sub", () => {
     const { getByTestId } = render(<Calculator />);
     const inputScreenNode = getByTestId("screen-input");
     expect(inputScreenNode.value).toBe("0");
 
-    fireEvent.change(inputScreenNode, { target: { value: '5-3' } });
+    fireEvent.change(inputScreenNode, { target: { value: "5-3" } });
 
-    fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
+    fireEvent.keyDown(inputScreenNode, { key: "Enter", code: "Enter" });
 
     expect(inputScreenNode.value).toBe("2");
-  }); 
+  });
 
+  // it("should calculate multiply", () => {
+  //   const { getByTestId } = render(<Calculator />);
+  //   const inputScreenNode = getByTestId("screen-input");
+  //   expect(inputScreenNode.value).toBe("0");
 
-  it("should calculate multiply", () => {
-    const { getByTestId } = render(<Calculator />);
-    const inputScreenNode = getByTestId("screen-input");
-    expect(inputScreenNode.value).toBe("0");
+  //   fireEvent.change(inputScreenNode, { target: { value: '2*3' } });
 
-    fireEvent.change(inputScreenNode, { target: { value: '2*3' } });
+  //   fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
 
-    fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
+  //   expect(inputScreenNode.value).toBe("6");
+  // });
 
-    expect(inputScreenNode.value).toBe("6");
-  }); 
+  // it("should calculate division", () => {
+  //   const { getByTestId } = render(<Calculator />);
+  //   const inputScreenNode = getByTestId("screen-input");
+  //   expect(inputScreenNode.value).toBe("0");
 
+  //   fireEvent.change(inputScreenNode, { target: { value: '6/2' } });
 
-  it("should calculate division", () => {
-    const { getByTestId } = render(<Calculator />);
-    const inputScreenNode = getByTestId("screen-input");
-    expect(inputScreenNode.value).toBe("0");
+  //   fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
 
-    fireEvent.change(inputScreenNode, { target: { value: '6/2' } });
-
-    fireEvent.keyDown(inputScreenNode, { key: 'Enter', code: 'Enter' })
-
-    expect(inputScreenNode.value).toBe("3");
-  }); 
+  //   expect(inputScreenNode.value).toBe("3");
+  // });
 });
-
